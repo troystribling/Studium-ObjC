@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArrayCategory : NSObject
+@interface NSMutableArray (Extensions)
+
+- (void)swap:(NSInteger)i with:(NSInteger)j;
+- (void)reverse;
+- (void)reverseStartingAt:(NSInteger)i upTo:(NSInteger)j;
+- (void)rotateAmount:(NSInteger)i;
 
 @end
+
+void swap(int vals[], int i, int j);
+void reverse(int vals[], int size);
+void reverseRange(int vals[], int i, int j);
+void rotate(int vals[], int size, int amount);

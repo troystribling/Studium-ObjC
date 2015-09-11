@@ -14,9 +14,9 @@
 		058342D91BA1D951001DE993 /* Studium_ObjC.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */; };
 		058342DB1BA1D951001DE993 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058342DA1BA1D951001DE993 /* Assets.xcassets */; };
 		058342DE1BA1D951001DE993 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 058342DC1BA1D951001DE993 /* LaunchScreen.storyboard */; };
-		058342E91BA1D951001DE993 /* Studium_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342E81BA1D951001DE993 /* Studium_ObjCTests.m */; };
 		058342F41BA1D951001DE993 /* Studium_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342F31BA1D951001DE993 /* Studium_ObjCUITests.m */; };
 		058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343031BA1DA72001DE993 /* NSArrayCategory.m */; };
+		058343061BA1DD37001DE993 /* NSArrayCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343051BA1DD37001DE993 /* NSArrayCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +49,13 @@
 		058342DD1BA1D951001DE993 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		058342DF1BA1D951001DE993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		058342E41BA1D951001DE993 /* Studium-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Studium-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		058342E81BA1D951001DE993 /* Studium_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Studium_ObjCTests.m; sourceTree = "<group>"; };
 		058342EA1BA1D951001DE993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		058342EF1BA1D951001DE993 /* Studium-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Studium-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058342F31BA1D951001DE993 /* Studium_ObjCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Studium_ObjCUITests.m; sourceTree = "<group>"; };
 		058342F51BA1D951001DE993 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		058343021BA1DA72001DE993 /* NSArrayCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayCategory.h; sourceTree = "<group>"; };
 		058343031BA1DA72001DE993 /* NSArrayCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayCategory.m; sourceTree = "<group>"; };
+		058343051BA1DD37001DE993 /* NSArrayCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayCategory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +132,8 @@
 		058342E71BA1D951001DE993 /* Studium-ObjCTests */ = {
 			isa = PBXGroup;
 			children = (
-				058342E81BA1D951001DE993 /* Studium_ObjCTests.m */,
 				058342EA1BA1D951001DE993 /* Info.plist */,
+				058343051BA1DD37001DE993 /* NSArrayCategory.m */,
 			);
 			path = "Studium-ObjCTests";
 			sourceTree = "<group>";
@@ -298,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058342E91BA1D951001DE993 /* Studium_ObjCTests.m in Sources */,
+				058343061BA1DD37001DE993 /* NSArrayCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
