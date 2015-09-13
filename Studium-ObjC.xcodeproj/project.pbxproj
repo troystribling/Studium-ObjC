@@ -22,6 +22,7 @@
 		058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343101BA4B4B0001DE993 /* BinarySearchTree.m */; };
 		058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343121BA4D80B001DE993 /* BinarySearchTests.m */; };
 		058343151BA5EC70001DE993 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058343141BA5EC70001DE993 /* QuartzCore.framework */; };
+		058343181BA62857001DE993 /* ModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343171BA62857001DE993 /* ModelTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		058343101BA4B4B0001DE993 /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		058343121BA4D80B001DE993 /* BinarySearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTests.m; sourceTree = "<group>"; };
 		058343141BA5EC70001DE993 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		058343161BA62857001DE993 /* ModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewController.h; sourceTree = "<group>"; };
+		058343171BA62857001DE993 /* ModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				058342DF1BA1D951001DE993 /* Info.plist */,
 				058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */,
 				058342CB1BA1D951001DE993 /* Supporting Files */,
+				058343161BA62857001DE993 /* ModelTableViewController.h */,
+				058343171BA62857001DE993 /* ModelTableViewController.m */,
 			);
 			path = "Studium-ObjC";
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				058342D91BA1D951001DE993 /* Studium_ObjC.xcdatamodeld in Sources */,
 				058342D01BA1D951001DE993 /* AppDelegate.m in Sources */,
 				058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */,
+				058343181BA62857001DE993 /* ModelTableViewController.m in Sources */,
 				058342CD1BA1D951001DE993 /* main.m in Sources */,
 				058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */,
 			);
