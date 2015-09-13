@@ -21,6 +21,7 @@
 		0583430E1BA4AA1B001DE993 /* LinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0583430D1BA4AA1B001DE993 /* LinkedListTests.m */; };
 		058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343101BA4B4B0001DE993 /* BinarySearchTree.m */; };
 		058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343121BA4D80B001DE993 /* BinarySearchTests.m */; };
+		058343151BA5EC70001DE993 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058343141BA5EC70001DE993 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		0583430F1BA4B4B0001DE993 /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
 		058343101BA4B4B0001DE993 /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		058343121BA4D80B001DE993 /* BinarySearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTests.m; sourceTree = "<group>"; };
+		058343141BA5EC70001DE993 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058343151BA5EC70001DE993 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +99,7 @@
 		058342BF1BA1D951001DE993 = {
 			isa = PBXGroup;
 			children = (
+				058343141BA5EC70001DE993 /* QuartzCore.framework */,
 				058342CA1BA1D951001DE993 /* Studium-ObjC */,
 				058342E71BA1D951001DE993 /* Studium-ObjCTests */,
 				058342F21BA1D951001DE993 /* Studium-ObjCUITests */,
