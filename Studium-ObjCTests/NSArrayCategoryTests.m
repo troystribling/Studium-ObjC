@@ -1,5 +1,5 @@
 //
-//  NSArrayCategory.m
+//  NSArrayCategoryTests.m
 //  Studium-ObjC
 //
 //  Created by Troy Stribling on 9/10/15.
@@ -15,13 +15,13 @@ void printIntArray(int vals[], int size) {
     }
 }
 
-@interface NSArrayCategory : XCTestCase
+@interface NSArrayCategoryTests : XCTestCase
 
 @property NSMutableArray* testArray;
 
 @end
 
-@implementation NSArrayCategory
+@implementation NSArrayCategoryTests
 
 - (void)setUp {
     [super setUp];
