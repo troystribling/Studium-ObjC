@@ -36,10 +36,10 @@
     newLayer.shadowRadius = 5.0;
     newLayer.shadowColor = [UIColor blackColor].CGColor;
     newLayer.shadowOpacity = 0.8;
-    CGPoint center = self.view.center;
-    CGPoint layerAnchor = newLayer.anchorPoint;
-    newLayer.frame = CGRectMake(0.0, 0.0, 200.0, 200.0);
-    CGRect vFrame = [[UIApplication sharedApplication] keyWindow].frame;
+    newLayer.borderColor = [UIColor blackColor].CGColor;
+    newLayer.borderWidth = 5.0;
+    CGSize vsize = self.view.frame.size;
+    newLayer.frame = CGRectMake((vsize.width - 200.0)/2.0, (vsize.height - 200)/2.0, 200.0, 200.0);
     [self.view.layer addSublayer:newLayer];
 }
 
