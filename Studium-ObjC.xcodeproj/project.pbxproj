@@ -23,6 +23,9 @@
 		058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343121BA4D80B001DE993 /* BinarySearchTests.m */; };
 		058343151BA5EC70001DE993 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058343141BA5EC70001DE993 /* QuartzCore.framework */; };
 		058343181BA62857001DE993 /* ModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343171BA62857001DE993 /* ModelTableViewController.m */; };
+		0583431B1BA680C8001DE993 /* UIViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0583431A1BA680C8001DE993 /* UIViewViewController.m */; };
+		058343251BA71AC9001DE993 /* NotificationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343241BA71AC9001DE993 /* NotificationTableViewController.m */; };
+		058343281BA728E9001DE993 /* KVOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343271BA728E9001DE993 /* KVOTableViewController.m */; };
 		058CDA451BA65A4A008247C7 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CDA441BA65A4A008247C7 /* Author.m */; };
 		058CDA491BA65A61008247C7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CDA481BA65A61008247C7 /* Book.m */; };
 /* End PBXBuildFile section */
@@ -73,6 +76,12 @@
 		058343141BA5EC70001DE993 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		058343161BA62857001DE993 /* ModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewController.h; sourceTree = "<group>"; };
 		058343171BA62857001DE993 /* ModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewController.m; sourceTree = "<group>"; };
+		058343191BA680C8001DE993 /* UIViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewViewController.h; sourceTree = "<group>"; };
+		0583431A1BA680C8001DE993 /* UIViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewViewController.m; sourceTree = "<group>"; };
+		058343231BA71AC9001DE993 /* NotificationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationTableViewController.h; sourceTree = "<group>"; };
+		058343241BA71AC9001DE993 /* NotificationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTableViewController.m; sourceTree = "<group>"; };
+		058343261BA728E9001DE993 /* KVOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVOTableViewController.h; sourceTree = "<group>"; };
+		058343271BA728E9001DE993 /* KVOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVOTableViewController.m; sourceTree = "<group>"; };
 		058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Author+CoreDataProperties.h"; sourceTree = "<group>"; };
 		058CDA431BA65A4A008247C7 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Author.h; sourceTree = "<group>"; };
 		058CDA441BA65A4A008247C7 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Author.m; sourceTree = "<group>"; };
@@ -131,27 +140,33 @@
 		058342CA1BA1D951001DE993 /* Studium-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				058343091BA49DCA001DE993 /* Structures */,
-				058343071BA3E305001DE993 /* ObjC */,
 				058343011BA1D9D4001DE993 /* Algorithms */,
 				058342CE1BA1D951001DE993 /* AppDelegate.h */,
 				058342CF1BA1D951001DE993 /* AppDelegate.m */,
-				058342D11BA1D951001DE993 /* ViewController.h */,
-				058342D21BA1D951001DE993 /* ViewController.m */,
-				058342D41BA1D951001DE993 /* Main.storyboard */,
 				058342DA1BA1D951001DE993 /* Assets.xcassets */,
-				058342DC1BA1D951001DE993 /* LaunchScreen.storyboard */,
-				058342DF1BA1D951001DE993 /* Info.plist */,
-				058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */,
-				058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */,
 				058CDA431BA65A4A008247C7 /* Author.h */,
 				058CDA441BA65A4A008247C7 /* Author.m */,
-				058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */,
+				058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */,
 				058CDA471BA65A61008247C7 /* Book.h */,
 				058CDA481BA65A61008247C7 /* Book.m */,
-				058342CB1BA1D951001DE993 /* Supporting Files */,
+				058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */,
+				058342DF1BA1D951001DE993 /* Info.plist */,
+				058343261BA728E9001DE993 /* KVOTableViewController.h */,
+				058343271BA728E9001DE993 /* KVOTableViewController.m */,
+				058342DC1BA1D951001DE993 /* LaunchScreen.storyboard */,
+				058342D41BA1D951001DE993 /* Main.storyboard */,
 				058343161BA62857001DE993 /* ModelTableViewController.h */,
 				058343171BA62857001DE993 /* ModelTableViewController.m */,
+				058343231BA71AC9001DE993 /* NotificationTableViewController.h */,
+				058343241BA71AC9001DE993 /* NotificationTableViewController.m */,
+				058343071BA3E305001DE993 /* ObjC */,
+				058343091BA49DCA001DE993 /* Structures */,
+				058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */,
+				058342CB1BA1D951001DE993 /* Supporting Files */,
+				058343191BA680C8001DE993 /* UIViewViewController.h */,
+				0583431A1BA680C8001DE993 /* UIViewViewController.m */,
+				058342D11BA1D951001DE993 /* ViewController.h */,
+				058342D21BA1D951001DE993 /* ViewController.m */,
 			);
 			path = "Studium-ObjC";
 			sourceTree = "<group>";
@@ -344,12 +359,15 @@
 				058CDA491BA65A61008247C7 /* Book.m in Sources */,
 				0583430C1BA49E06001DE993 /* LinkedList.m in Sources */,
 				058342D31BA1D951001DE993 /* ViewController.m in Sources */,
+				0583431B1BA680C8001DE993 /* UIViewViewController.m in Sources */,
 				058CDA451BA65A4A008247C7 /* Author.m in Sources */,
 				058342D91BA1D951001DE993 /* Studium_ObjC.xcdatamodeld in Sources */,
+				058343251BA71AC9001DE993 /* NotificationTableViewController.m in Sources */,
 				058342D01BA1D951001DE993 /* AppDelegate.m in Sources */,
 				058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */,
 				058343181BA62857001DE993 /* ModelTableViewController.m in Sources */,
 				058342CD1BA1D951001DE993 /* main.m in Sources */,
+				058343281BA728E9001DE993 /* KVOTableViewController.m in Sources */,
 				058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
