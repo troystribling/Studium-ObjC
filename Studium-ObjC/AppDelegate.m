@@ -57,7 +57,14 @@
         [author addBooksObject:book];
         book = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
         book.title = @"Ancestor A Novel";
-        book.rating = [NSNumber numberWithInt:5];
+        book.rating = [NSNumber numberWithInt:4];
+        book.author = author;
+        [author addBooksObject:book];
+        author = [NSEntityDescription insertNewObjectForEntityForName:@"Author" inManagedObjectContext:context];
+        author.name = @"Ernest Cline";
+        book = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
+        book.title = @"Armada";
+        book.rating = [NSNumber numberWithInt:4];
         book.author = author;
         [author addBooksObject:book];
         [context save:nil];

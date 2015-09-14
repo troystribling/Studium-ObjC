@@ -15,6 +15,8 @@
 
 @property(nonatomic, retain) NSArray<Author*>* authors;
 
+- (NSArray<Book*>*)booksForAuthor:(Author*)author;
+
 @end
 
 @implementation ModelTableViewController
@@ -29,13 +31,18 @@
 
 - (void)viewDidLoad {
     NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Author"];
-    NSError* error;
-    _authors = [self.managedObjectContext executeFetchRequest:request error:&error];
+    _authors = [self.managedObjectContext executeFetchRequest:request error:nil];
     [super viewDidLoad];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (NSArray<Book*>*)booksForAuthor:(Author *)author {
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Book"];
+    request.predicate = [NSPredicate predicateWithFormat:@"author = %@", author];
+    return [self.managedObjectContext executeFetchRequest:request error:nil];
 }
 
 #pragma mark - Table view data source
@@ -45,7 +52,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    Author* author = [self.authors objectAtIndex:section];
+    return [[self booksForAuthor:author] count];
 }
 
 - (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
@@ -55,8 +63,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CoreData" forIndexPath:indexPath];
-    cell.textLabel.text = @"Troy";
-    cell.detailTextLabel.text = @"1";
+    Author* author = [self.authors objectAtIndex:indexPath.section];
+    NSArray<Book*>* books = [self booksForAuthor:author];
+    Book* book = [books objectAtIndex:indexPath.row];
+    cell.textLabel.text = book.title;
+    cell.detailTextLabel.text = [book.rating stringValue];
     return cell;
 }
 
