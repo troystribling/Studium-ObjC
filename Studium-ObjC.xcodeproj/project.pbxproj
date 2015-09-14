@@ -23,6 +23,8 @@
 		058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343121BA4D80B001DE993 /* BinarySearchTests.m */; };
 		058343151BA5EC70001DE993 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058343141BA5EC70001DE993 /* QuartzCore.framework */; };
 		058343181BA62857001DE993 /* ModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343171BA62857001DE993 /* ModelTableViewController.m */; };
+		058CDA451BA65A4A008247C7 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CDA441BA65A4A008247C7 /* Author.m */; };
+		058CDA491BA65A61008247C7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CDA481BA65A61008247C7 /* Book.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,12 @@
 		058343141BA5EC70001DE993 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		058343161BA62857001DE993 /* ModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewController.h; sourceTree = "<group>"; };
 		058343171BA62857001DE993 /* ModelTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTableViewController.m; sourceTree = "<group>"; };
+		058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Author+CoreDataProperties.h"; sourceTree = "<group>"; };
+		058CDA431BA65A4A008247C7 /* Author.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Author.h; sourceTree = "<group>"; };
+		058CDA441BA65A4A008247C7 /* Author.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Author.m; sourceTree = "<group>"; };
+		058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataProperties.h"; sourceTree = "<group>"; };
+		058CDA471BA65A61008247C7 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		058CDA481BA65A61008247C7 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +143,12 @@
 				058342DC1BA1D951001DE993 /* LaunchScreen.storyboard */,
 				058342DF1BA1D951001DE993 /* Info.plist */,
 				058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */,
+				058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */,
+				058CDA431BA65A4A008247C7 /* Author.h */,
+				058CDA441BA65A4A008247C7 /* Author.m */,
+				058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */,
+				058CDA471BA65A61008247C7 /* Book.h */,
+				058CDA481BA65A61008247C7 /* Book.m */,
 				058342CB1BA1D951001DE993 /* Supporting Files */,
 				058343161BA62857001DE993 /* ModelTableViewController.h */,
 				058343171BA62857001DE993 /* ModelTableViewController.m */,
@@ -327,8 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				058CDA491BA65A61008247C7 /* Book.m in Sources */,
 				0583430C1BA49E06001DE993 /* LinkedList.m in Sources */,
 				058342D31BA1D951001DE993 /* ViewController.m in Sources */,
+				058CDA451BA65A4A008247C7 /* Author.m in Sources */,
 				058342D91BA1D951001DE993 /* Studium_ObjC.xcdatamodeld in Sources */,
 				058342D01BA1D951001DE993 /* AppDelegate.m in Sources */,
 				058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */,
@@ -560,6 +576,7 @@
 				058342FA1BA1D951001DE993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		058342FB1BA1D951001DE993 /* Build configuration list for PBXNativeTarget "Studium-ObjCTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +585,7 @@
 				058342FD1BA1D951001DE993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		058342FE1BA1D951001DE993 /* Build configuration list for PBXNativeTarget "Studium-ObjCUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +594,7 @@
 				058343001BA1D951001DE993 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

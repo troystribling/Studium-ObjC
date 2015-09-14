@@ -7,41 +7,61 @@
 //
 
 #import "AppDelegate.h"
+#import "Author.h"
+#import "Book.h"
 
 @interface AppDelegate ()
+
+- (void)createObjects;
 
 @end
 
 @implementation AppDelegate
 
 
++ (AppDelegate *)sharedAppDelegate {
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self createObjects];
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
+}
+
+- (void)createObjects {
+    NSManagedObjectContext* context = [self managedObjectContext];
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"Author"];
+    if ([context countForFetchRequest:request error:nil] == 0) {
+        Author* author = [NSEntityDescription insertNewObjectForEntityForName:@"Author" inManagedObjectContext:context];
+        author.name = @"Scott Sigler";
+        Book* book = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
+        book.title = @"Infected A Novel";
+        book.rating = [NSNumber numberWithInt:5];
+        book.author = author;
+        [author addBooksObject:book];
+        book = [NSEntityDescription insertNewObjectForEntityForName:@"Book" inManagedObjectContext:context];
+        book.title = @"Ancestor A Novel";
+        book.rating = [NSNumber numberWithInt:5];
+        book.author = author;
+        [author addBooksObject:book];
+        [context save:nil];
+    }
 }
 
 #pragma mark - Core Data stack
@@ -51,7 +71,6 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "gnos.us.Studium_ObjC" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
@@ -66,13 +85,9 @@
 }
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-    // The persistent store coordinator for the application. This implementation creates and returns a coordinator, having added the store for the application to it.
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
-    
-    // Create the coordinator and store
-    
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Studium_ObjC.sqlite"];
     NSError *error = nil;
@@ -95,7 +110,6 @@
 
 
 - (NSManagedObjectContext *)managedObjectContext {
-    // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.)
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }

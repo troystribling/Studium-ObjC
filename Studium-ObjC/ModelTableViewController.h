@@ -10,4 +10,6 @@
 
 @interface ModelTableViewController : UITableViewController
 
+@property(nonatomic, retain) NSManagedObjectContext* managedObjectContext;
+
 @end

@@ -26,7 +26,7 @@
 - (void)viewDidLayoutSubviews {
     self.view.layer.backgroundColor = [UIColor lightGrayColor].CGColor;
     self.view.layer.cornerRadius = 40.0;
-    self.view.layer.frame = CGRectInset(self.view.frame, 40.0, 40.0);
+    self.view.layer.frame = CGRectInset(self.view.frame, 40.0, 80.0);
     [self addLayers];
     [self rotateImage];
     
