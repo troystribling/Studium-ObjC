@@ -11,6 +11,7 @@
 @interface NotificationTableViewController ()
 
 @property(nonatomic, retain) NSMutableArray<NSNumber*>* notifiedValues;
+
 @end
 
 @implementation NotificationTableViewController

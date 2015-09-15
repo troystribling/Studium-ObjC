@@ -7,11 +7,11 @@
 //
 
 #import "UIViewViewController.h"
+#import "KVOTableViewController.h"
 
 @interface UIViewViewController ()
 
 @property(nonatomic, retain) IBOutlet UIImageView* imageView;
-@property(nonatomic, retain) NSNumber* count;
 
 - (void)sendNotification;
 
@@ -35,6 +35,11 @@
     [self sendNotification];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue*)segue sender:(id)sender {
+    KVOTableViewController* controller = (KVOTableViewController*)segue.destinationViewController;
+    controller.controller = self;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
@@ -43,7 +48,7 @@
     dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC);
     dispatch_after(delay, dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"NotificationExample" object:self.count];
-        _count = [NSNumber numberWithInt:([self.count intValue] + 1)];
+        [self setCount:[NSNumber numberWithInt:([self.count intValue] + 1)]];
         [self sendNotification];
     });
 }

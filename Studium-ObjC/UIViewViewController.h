@@ -10,4 +10,6 @@
 
 @interface UIViewViewController : UIViewController
 
+@property(nonatomic, retain) NSNumber* count;
+
 @end

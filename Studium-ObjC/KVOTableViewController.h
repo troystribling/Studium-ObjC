@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class UIViewViewController;
+
 @interface KVOTableViewController : UITableViewController
+
+@property(nonatomic, weak) UIViewViewController* controller;
 
 @end
