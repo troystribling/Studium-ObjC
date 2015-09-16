@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		052F7A8C1BA9145C0008C3D6 /* ProtocolExercises.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */; };
+		052F7A8E1BA9214F0008C3D6 /* ProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */; };
 		058342CD1BA1D951001DE993 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342CC1BA1D951001DE993 /* main.m */; };
 		058342D01BA1D951001DE993 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342CF1BA1D951001DE993 /* AppDelegate.m */; };
 		058342D31BA1D951001DE993 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342D21BA1D951001DE993 /* ViewController.m */; };
@@ -48,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052F7A8A1BA9145C0008C3D6 /* ProtocolExercises.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolExercises.h; sourceTree = "<group>"; };
+		052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolExercises.m; sourceTree = "<group>"; };
+		052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolTests.m; sourceTree = "<group>"; };
 		058342C81BA1D951001DE993 /* Studium-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Studium-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058342CC1BA1D951001DE993 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		058342CE1BA1D951001DE993 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,7 +164,8 @@
 				058343171BA62857001DE993 /* ModelTableViewController.m */,
 				058343231BA71AC9001DE993 /* NotificationTableViewController.h */,
 				058343241BA71AC9001DE993 /* NotificationTableViewController.m */,
-				058343071BA3E305001DE993 /* ObjC */,
+				052F7A8A1BA9145C0008C3D6 /* ProtocolExercises.h */,
+				052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */,
 				058343091BA49DCA001DE993 /* Structures */,
 				058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */,
 				058342CB1BA1D951001DE993 /* Supporting Files */,
@@ -186,6 +192,7 @@
 				058343051BA1DD37001DE993 /* NSArrayCategoryTests.m */,
 				0583430D1BA4AA1B001DE993 /* LinkedListTests.m */,
 				058343121BA4D80B001DE993 /* BinarySearchTests.m */,
+				052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */,
 			);
 			path = "Studium-ObjCTests";
 			sourceTree = "<group>";
@@ -206,13 +213,6 @@
 				058343031BA1DA72001DE993 /* NSArrayCategory.m */,
 			);
 			name = Algorithms;
-			sourceTree = "<group>";
-		};
-		058343071BA3E305001DE993 /* ObjC */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ObjC;
 			sourceTree = "<group>";
 		};
 		058343091BA49DCA001DE993 /* Structures */ = {
@@ -369,6 +369,7 @@
 				058342CD1BA1D951001DE993 /* main.m in Sources */,
 				058343281BA728E9001DE993 /* KVOTableViewController.m in Sources */,
 				058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */,
+				052F7A8C1BA9145C0008C3D6 /* ProtocolExercises.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +380,7 @@
 				058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */,
 				0583430E1BA4AA1B001DE993 /* LinkedListTests.m in Sources */,
 				058343061BA1DD37001DE993 /* NSArrayCategoryTests.m in Sources */,
+				052F7A8E1BA9214F0008C3D6 /* ProtocolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
