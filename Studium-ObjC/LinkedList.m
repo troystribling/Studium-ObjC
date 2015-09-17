@@ -20,9 +20,7 @@ static int _intListCount = 0;
 void push(int value) {
     IntNode* newNode = (IntNode*)malloc(sizeof(IntNode));
     newNode->value = value;
-    if (firstIntNode != nil) {
-        newNode->next = firstIntNode;
-    }
+    newNode->next = firstIntNode;
     firstIntNode = newNode;
     _intListCount++;
 }
@@ -39,3 +37,25 @@ int pop() {
 int intListCount() {
     return _intListCount;
 }
+
+@implementation ListNode
+@end
+
+@implementation ListNodes
+
+- (void)push:(id)value {
+    ListNode* newNode = [[ListNode alloc] init];
+    newNode.value = value;
+    newNode.next = self.head;
+    self.head = newNode;
+    self.count++;
+}
+
+- (id)pop {
+    ListNode* oldNode = self.head;
+    self.head = oldNode.next;
+    self.count--;
+    return oldNode.value;
+}
+
+@end

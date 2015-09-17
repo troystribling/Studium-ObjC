@@ -15,13 +15,12 @@
 
 @end
 
-@interface ListNodes : NSObject <NSFastEnumeration>
+@interface ListNodes : NSObject
 
 @property(nonatomic, retain) ListNode* head;
 @property(nonatomic, assign) NSInteger count;
-@property(nonatomic, assign) unsigned long mutations;
 
-- (void)push:(id)node;
+- (void)push:(id)value;
 - (id)pop;
 
 @end

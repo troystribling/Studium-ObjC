@@ -40,4 +40,16 @@ void printIntList() {
     printIntList();
 }
 
+-(void)testListNodes {
+    ListNodes* nodes = [[ListNodes alloc] init];
+    [nodes push:@"Node 1"];
+    [nodes push:@"Node 2"];
+    [nodes push:@"Node 3"];
+    ListNode* current = nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+}
+
 @end

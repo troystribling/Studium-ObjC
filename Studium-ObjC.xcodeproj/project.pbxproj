@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		052F7A8C1BA9145C0008C3D6 /* ProtocolExercises.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */; };
 		052F7A8E1BA9214F0008C3D6 /* ProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */; };
+		052F7A911BA9C31F0008C3D6 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A901BA9C31F0008C3D6 /* BinarySearch.m */; };
 		058342CD1BA1D951001DE993 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342CC1BA1D951001DE993 /* main.m */; };
 		058342D01BA1D951001DE993 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342CF1BA1D951001DE993 /* AppDelegate.m */; };
 		058342D31BA1D951001DE993 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342D21BA1D951001DE993 /* ViewController.m */; };
@@ -53,6 +54,8 @@
 		052F7A8A1BA9145C0008C3D6 /* ProtocolExercises.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProtocolExercises.h; sourceTree = "<group>"; };
 		052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolExercises.m; sourceTree = "<group>"; };
 		052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolTests.m; sourceTree = "<group>"; };
+		052F7A8F1BA9C31F0008C3D6 /* BinarySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
+		052F7A901BA9C31F0008C3D6 /* BinarySearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearch.m; sourceTree = "<group>"; };
 		058342C81BA1D951001DE993 /* Studium-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Studium-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058342CC1BA1D951001DE993 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		058342CE1BA1D951001DE993 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 			children = (
 				058343021BA1DA72001DE993 /* NSArrayCategory.h */,
 				058343031BA1DA72001DE993 /* NSArrayCategory.m */,
+				052F7A8F1BA9C31F0008C3D6 /* BinarySearch.h */,
+				052F7A901BA9C31F0008C3D6 /* BinarySearch.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				058342D01BA1D951001DE993 /* AppDelegate.m in Sources */,
 				058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */,
 				058343181BA62857001DE993 /* ModelTableViewController.m in Sources */,
+				052F7A911BA9C31F0008C3D6 /* BinarySearch.m in Sources */,
 				058342CD1BA1D951001DE993 /* main.m in Sources */,
 				058343281BA728E9001DE993 /* KVOTableViewController.m in Sources */,
 				058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */,
