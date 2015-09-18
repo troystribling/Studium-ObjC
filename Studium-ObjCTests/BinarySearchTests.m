@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "BinarySearchTree.h"
+#import "BinarySearch.h"
 
 @interface BinarySearchTests : XCTestCase
 
@@ -62,6 +63,19 @@
     });
     status = isOrdered();
     NSLog(@"isOrdered=%d", status);
+}
+
+- (void)testBinarySearch {
+    NSArray* vals = @[[NSNumber numberWithInt:2],
+                      [NSNumber numberWithInt:4],
+                      [NSNumber numberWithInt:6],
+                      [NSNumber numberWithInt:7],
+                      [NSNumber numberWithInt:8],
+                      [NSNumber numberWithInt:9]];
+    NSInteger index = [BinarySearch find:[NSNumber numberWithInt:8] in:vals];
+    NSLog(@"Index=%ld", index);
+    index = [BinarySearch find:[NSNumber numberWithInt:10] in:vals];
+    NSLog(@"Index=%ld", index);
 }
 
 @end

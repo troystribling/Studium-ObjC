@@ -10,6 +10,6 @@
 
 @interface BinarySearch : NSObject
 
-- (NSInteger)find:(id)value in:(NSArray*)values;
++ (NSInteger)find:(id)value in:(NSArray*)values;
 
 @end

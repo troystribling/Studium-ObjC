@@ -31,6 +31,10 @@
 		058343281BA728E9001DE993 /* KVOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343271BA728E9001DE993 /* KVOTableViewController.m */; };
 		058CDA451BA65A4A008247C7 /* Author.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CDA441BA65A4A008247C7 /* Author.m */; };
 		058CDA491BA65A61008247C7 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CDA481BA65A61008247C7 /* Book.m */; };
+		059471471BAB086600552046 /* NSStringCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 059471461BAB086600552046 /* NSStringCategory.m */; };
+		059471491BABB42F00552046 /* StringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 059471481BABB42F00552046 /* StringTests.m */; };
+		0594714C1BAC486C00552046 /* Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594714B1BAC486C00552046 /* Sort.m */; };
+		0594714E1BAC52E600552046 /* SortTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0594714D1BAC52E600552046 /* SortTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +100,12 @@
 		058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataProperties.h"; sourceTree = "<group>"; };
 		058CDA471BA65A61008247C7 /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		058CDA481BA65A61008247C7 /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		059471451BAB086600552046 /* NSStringCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringCategory.h; sourceTree = "<group>"; };
+		059471461BAB086600552046 /* NSStringCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringCategory.m; sourceTree = "<group>"; };
+		059471481BABB42F00552046 /* StringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringTests.m; sourceTree = "<group>"; };
+		0594714A1BAC486C00552046 /* Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sort.h; sourceTree = "<group>"; };
+		0594714B1BAC486C00552046 /* Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sort.m; sourceTree = "<group>"; };
+		0594714D1BAC52E600552046 /* SortTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +206,8 @@
 				0583430D1BA4AA1B001DE993 /* LinkedListTests.m */,
 				058343121BA4D80B001DE993 /* BinarySearchTests.m */,
 				052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */,
+				059471481BABB42F00552046 /* StringTests.m */,
+				0594714D1BAC52E600552046 /* SortTests.m */,
 			);
 			path = "Studium-ObjCTests";
 			sourceTree = "<group>";
@@ -216,6 +228,10 @@
 				058343031BA1DA72001DE993 /* NSArrayCategory.m */,
 				052F7A8F1BA9C31F0008C3D6 /* BinarySearch.h */,
 				052F7A901BA9C31F0008C3D6 /* BinarySearch.m */,
+				059471451BAB086600552046 /* NSStringCategory.h */,
+				059471461BAB086600552046 /* NSStringCategory.m */,
+				0594714A1BAC486C00552046 /* Sort.h */,
+				0594714B1BAC486C00552046 /* Sort.m */,
 			);
 			name = Algorithms;
 			sourceTree = "<group>";
@@ -362,11 +378,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				058CDA491BA65A61008247C7 /* Book.m in Sources */,
+				0594714C1BAC486C00552046 /* Sort.m in Sources */,
 				0583430C1BA49E06001DE993 /* LinkedList.m in Sources */,
 				058342D31BA1D951001DE993 /* ViewController.m in Sources */,
 				0583431B1BA680C8001DE993 /* UIViewViewController.m in Sources */,
 				058CDA451BA65A4A008247C7 /* Author.m in Sources */,
 				058342D91BA1D951001DE993 /* Studium_ObjC.xcdatamodeld in Sources */,
+				059471471BAB086600552046 /* NSStringCategory.m in Sources */,
 				058343251BA71AC9001DE993 /* NotificationTableViewController.m in Sources */,
 				058342D01BA1D951001DE993 /* AppDelegate.m in Sources */,
 				058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */,
@@ -386,6 +404,8 @@
 				058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */,
 				0583430E1BA4AA1B001DE993 /* LinkedListTests.m in Sources */,
 				058343061BA1DD37001DE993 /* NSArrayCategoryTests.m in Sources */,
+				0594714E1BAC52E600552046 /* SortTests.m in Sources */,
+				059471491BABB42F00552046 /* StringTests.m in Sources */,
 				052F7A8E1BA9214F0008C3D6 /* ProtocolTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

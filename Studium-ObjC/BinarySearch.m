@@ -10,21 +10,21 @@
 
 @interface BinarySearch ()
 
-- (NSInteger)find:(id)value in:(NSArray *)values start:(NSInteger)start end:(NSInteger)end;
++ (NSInteger)find:(id)value in:(NSArray *)values start:(NSInteger)start end:(NSInteger)end;
 
 @end
 
 @implementation BinarySearch
 
-- (NSInteger)find:(id)value in:(NSArray *)values {
++ (NSInteger)find:(id)value in:(NSArray *)values {
     return [self find:value in:values start:0 end:[values count] - 1];
 }
 
-- (NSInteger)find:(id)value in:(NSArray *)values start:(NSInteger)start end:(NSInteger)end {
++ (NSInteger)find:(id)value in:(NSArray *)values start:(NSInteger)start end:(NSInteger)end {
     if (start > end) {
         return -1;
     }
-    NSInteger mid = (end - start)/2;
+    NSInteger mid = (end - start)/2 + start;
     NSComparisonResult result = [value compare:[values objectAtIndex:mid]];
     if (result == NSOrderedAscending) {
         return [self find:value in:values start:start end:mid-1];
