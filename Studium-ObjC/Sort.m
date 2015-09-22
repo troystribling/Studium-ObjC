@@ -17,19 +17,19 @@
     NSInteger i = lo;
     NSInteger j = mid+1;
     for (NSInteger k = lo; k <= hi; k++) {
-        id tmpi = [tmp objectAtIndex:i];
-        id tmpj = [tmp objectAtIndex:j];
         if (i > mid) {
+            id tmpj = [tmp objectAtIndex:j];
             [self replaceObjectAtIndex:k withObject:tmpj];
             j++;
         } else if (j > hi) {
+            id tmpi = [tmp objectAtIndex:i];
             [self replaceObjectAtIndex:k withObject:tmpi];
             i++;
-        } else if ([tmpi compare:tmpj] == NSOrderedAscending) {
-            [self replaceObjectAtIndex:k withObject:tmpi];
+        } else if ([[tmp objectAtIndex:i] compare:[tmp objectAtIndex:j]] == NSOrderedAscending) {
+            [self replaceObjectAtIndex:k withObject:[tmp objectAtIndex:i]];
             i++;
         } else {
-            [self replaceObjectAtIndex:k withObject:tmpj];
+            [self replaceObjectAtIndex:k withObject:[tmp objectAtIndex:j]];
             j++;
         }
     }
