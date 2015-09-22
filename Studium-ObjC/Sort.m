@@ -7,6 +7,7 @@
 //
 
 #import "Sort.h"
+#import "NSArrayCategory.h"
 
 @implementation NSMutableArray (MergeSort)
 
@@ -48,5 +49,47 @@
     [self mergeFromLo:lo toHi:hi];
 }
 
+
+@end
+
+@implementation NSMutableArray (QuickSort)
+
+- (void)quickSortFromLo:(NSInteger)lo toHi:(NSInteger)hi {
+    if (lo >= hi) {
+        return;
+    }
+    NSInteger partion = [self partitionFromLo:lo toHi:hi];
+    [self quickSortFromLo:lo toHi:partion-1];
+    [self quickSortFromLo:partion+1 toHi:hi];
+}
+
+- (void)quickSort {
+    [self quickSortFromLo:0 toHi:[self count]-1];
+}
+
+- (NSInteger)partitionFromLo:(NSInteger)lo toHi:(NSInteger)hi {
+    NSInteger i = lo;
+    NSInteger j = hi + 1;
+    id pivot = [self objectAtIndex:lo];
+    while (true) {
+        while ([pivot compare:[self objectAtIndex:(++i)]] == NSOrderedDescending) {
+            if (i == hi) {
+                break;
+            }
+        }
+        while ([pivot compare:[self objectAtIndex:(--j)]] == NSOrderedAscending) {
+            if (j == lo) {
+                break;
+            }
+        }
+        if (i >= j) {
+            break;
+        } else {
+            [self swap:i with:j];
+        }
+        [self swap:lo with:j];
+    }
+    return j;
+}
 
 @end

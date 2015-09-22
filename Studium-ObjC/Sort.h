@@ -14,3 +14,10 @@
 - (void)mergeSort;
 
 @end
+
+@interface NSMutableArray (QuickSort)
+
+- (void)quickSortFromLo:(NSInteger)lo toHi:(NSInteger)hi;
+- (void)quickSort;
+
+@end

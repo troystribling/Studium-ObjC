@@ -11,12 +11,22 @@
 
 @interface SortTests : XCTestCase
 
+@property NSMutableArray* vals;
+
 @end
 
 @implementation SortTests
 
 - (void)setUp {
     [super setUp];
+    _vals = [NSMutableArray arrayWithArray:
+             @[[NSNumber numberWithInt:6],
+               [NSNumber numberWithInt:2],
+               [NSNumber numberWithInt:8],
+               [NSNumber numberWithInt:1],
+               [NSNumber numberWithInt:3],
+               [NSNumber numberWithInt:7]]];
+
 }
 
 - (void)tearDown {
@@ -24,16 +34,15 @@
 }
 
 - (void)testMergeSort {
-    NSMutableArray* vals = [NSMutableArray arrayWithArray:
-                            @[[NSNumber numberWithInt:6],
-                              [NSNumber numberWithInt:2],
-                              [NSNumber numberWithInt:8],
-                              [NSNumber numberWithInt:1],
-                              [NSNumber numberWithInt:3],
-                              [NSNumber numberWithInt:7]]];
-    NSLog(@"%@", vals);
-    [vals mergeSort];
-    NSLog(@"%@", vals);
+    NSLog(@"%@", self.vals);
+    [self.vals mergeSort];
+    NSLog(@"%@", self.vals);
+}
+
+- (void)testQuickSort {
+    NSLog(@"%@", self.vals);
+    [self.vals quickSort];
+    NSLog(@"%@", self.vals);
 }
 
 
