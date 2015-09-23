@@ -10,6 +10,7 @@
 		052F7A8C1BA9145C0008C3D6 /* ProtocolExercises.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */; };
 		052F7A8E1BA9214F0008C3D6 /* ProtocolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */; };
 		052F7A911BA9C31F0008C3D6 /* BinarySearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 052F7A901BA9C31F0008C3D6 /* BinarySearch.m */; };
+		0537BF481BB1B9CB0057B5EA /* BinaryTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0537BF471BB1B9CB0057B5EA /* BinaryTree.m */; settings = {ASSET_TAGS = (); }; };
 		058342CD1BA1D951001DE993 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342CC1BA1D951001DE993 /* main.m */; };
 		058342D01BA1D951001DE993 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342CF1BA1D951001DE993 /* AppDelegate.m */; };
 		058342D31BA1D951001DE993 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058342D21BA1D951001DE993 /* ViewController.m */; };
@@ -22,7 +23,7 @@
 		058343061BA1DD37001DE993 /* NSArrayCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343051BA1DD37001DE993 /* NSArrayCategoryTests.m */; };
 		0583430C1BA49E06001DE993 /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0583430B1BA49E06001DE993 /* LinkedList.m */; };
 		0583430E1BA4AA1B001DE993 /* LinkedListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0583430D1BA4AA1B001DE993 /* LinkedListTests.m */; };
-		058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343101BA4B4B0001DE993 /* BinarySearchTree.m */; };
+		058343111BA4B4B0001DE993 /* BinarySearchTreeInC.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343101BA4B4B0001DE993 /* BinarySearchTreeInC.m */; };
 		058343131BA4D80B001DE993 /* BinarySearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343121BA4D80B001DE993 /* BinarySearchTests.m */; };
 		058343151BA5EC70001DE993 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 058343141BA5EC70001DE993 /* QuartzCore.framework */; };
 		058343181BA62857001DE993 /* ModelTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058343171BA62857001DE993 /* ModelTableViewController.m */; };
@@ -60,6 +61,8 @@
 		052F7A8D1BA9214F0008C3D6 /* ProtocolTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolTests.m; sourceTree = "<group>"; };
 		052F7A8F1BA9C31F0008C3D6 /* BinarySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
 		052F7A901BA9C31F0008C3D6 /* BinarySearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearch.m; sourceTree = "<group>"; };
+		0537BF461BB1B9CB0057B5EA /* BinaryTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTree.h; sourceTree = "<group>"; };
+		0537BF471BB1B9CB0057B5EA /* BinaryTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTree.m; sourceTree = "<group>"; };
 		058342C81BA1D951001DE993 /* Studium-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Studium-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		058342CC1BA1D951001DE993 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		058342CE1BA1D951001DE993 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,8 +85,8 @@
 		0583430A1BA49E06001DE993 /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
 		0583430B1BA49E06001DE993 /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		0583430D1BA4AA1B001DE993 /* LinkedListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListTests.m; sourceTree = "<group>"; };
-		0583430F1BA4B4B0001DE993 /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
-		058343101BA4B4B0001DE993 /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
+		0583430F1BA4B4B0001DE993 /* BinarySearchTreeInC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTreeInC.h; sourceTree = "<group>"; };
+		058343101BA4B4B0001DE993 /* BinarySearchTreeInC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTreeInC.m; sourceTree = "<group>"; };
 		058343121BA4D80B001DE993 /* BinarySearchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTests.m; sourceTree = "<group>"; };
 		058343141BA5EC70001DE993 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		058343161BA62857001DE993 /* ModelTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTableViewController.h; sourceTree = "<group>"; };
@@ -134,6 +137,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0537BF421BB1AD040057B5EA /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				058343191BA680C8001DE993 /* UIViewViewController.h */,
+				0583431A1BA680C8001DE993 /* UIViewViewController.m */,
+				058342D11BA1D951001DE993 /* ViewController.h */,
+				058342D21BA1D951001DE993 /* ViewController.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		0537BF431BB1AD120057B5EA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				058343161BA62857001DE993 /* ModelTableViewController.h */,
+				058343171BA62857001DE993 /* ModelTableViewController.m */,
+				058CDA431BA65A4A008247C7 /* Author.h */,
+				058CDA441BA65A4A008247C7 /* Author.m */,
+				058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */,
+				058CDA471BA65A61008247C7 /* Book.h */,
+				058CDA481BA65A61008247C7 /* Book.m */,
+				058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		0537BF441BB1AD3D0057B5EA /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				058343261BA728E9001DE993 /* KVOTableViewController.h */,
+				058343271BA728E9001DE993 /* KVOTableViewController.m */,
+				058343231BA71AC9001DE993 /* NotificationTableViewController.h */,
+				058343241BA71AC9001DE993 /* NotificationTableViewController.m */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
+		0537BF451BB1AE1F0057B5EA /* ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				052F7A8A1BA9145C0008C3D6 /* ProtocolExercises.h */,
+				052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */,
+			);
+			name = ObjC;
+			sourceTree = "<group>";
+		};
 		058342BF1BA1D951001DE993 = {
 			isa = PBXGroup;
 			children = (
@@ -158,34 +207,20 @@
 		058342CA1BA1D951001DE993 /* Studium-ObjC */ = {
 			isa = PBXGroup;
 			children = (
-				058343011BA1D9D4001DE993 /* Algorithms */,
 				058342CE1BA1D951001DE993 /* AppDelegate.h */,
 				058342CF1BA1D951001DE993 /* AppDelegate.m */,
-				058342DA1BA1D951001DE993 /* Assets.xcassets */,
-				058CDA431BA65A4A008247C7 /* Author.h */,
-				058CDA441BA65A4A008247C7 /* Author.m */,
-				058CDA421BA65A4A008247C7 /* Author+CoreDataProperties.h */,
-				058CDA471BA65A61008247C7 /* Book.h */,
-				058CDA481BA65A61008247C7 /* Book.m */,
-				058CDA461BA65A61008247C7 /* Book+CoreDataProperties.h */,
 				058342DF1BA1D951001DE993 /* Info.plist */,
-				058343261BA728E9001DE993 /* KVOTableViewController.h */,
-				058343271BA728E9001DE993 /* KVOTableViewController.m */,
+				058342DA1BA1D951001DE993 /* Assets.xcassets */,
+				058343011BA1D9D4001DE993 /* Algorithms */,
+				0537BF421BB1AD040057B5EA /* Animation */,
+				0537BF431BB1AD120057B5EA /* CoreData */,
 				058342DC1BA1D951001DE993 /* LaunchScreen.storyboard */,
 				058342D41BA1D951001DE993 /* Main.storyboard */,
-				058343161BA62857001DE993 /* ModelTableViewController.h */,
-				058343171BA62857001DE993 /* ModelTableViewController.m */,
-				058343231BA71AC9001DE993 /* NotificationTableViewController.h */,
-				058343241BA71AC9001DE993 /* NotificationTableViewController.m */,
-				052F7A8A1BA9145C0008C3D6 /* ProtocolExercises.h */,
-				052F7A8B1BA9145C0008C3D6 /* ProtocolExercises.m */,
+				0537BF441BB1AD3D0057B5EA /* Notifications */,
+				0537BF451BB1AE1F0057B5EA /* ObjC */,
 				058343091BA49DCA001DE993 /* Structures */,
 				058342D71BA1D951001DE993 /* Studium_ObjC.xcdatamodeld */,
 				058342CB1BA1D951001DE993 /* Supporting Files */,
-				058343191BA680C8001DE993 /* UIViewViewController.h */,
-				0583431A1BA680C8001DE993 /* UIViewViewController.m */,
-				058342D11BA1D951001DE993 /* ViewController.h */,
-				058342D21BA1D951001DE993 /* ViewController.m */,
 			);
 			path = "Studium-ObjC";
 			sourceTree = "<group>";
@@ -239,8 +274,10 @@
 		058343091BA49DCA001DE993 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				0583430F1BA4B4B0001DE993 /* BinarySearchTree.h */,
-				058343101BA4B4B0001DE993 /* BinarySearchTree.m */,
+				0583430F1BA4B4B0001DE993 /* BinarySearchTreeInC.h */,
+				058343101BA4B4B0001DE993 /* BinarySearchTreeInC.m */,
+				0537BF461BB1B9CB0057B5EA /* BinaryTree.h */,
+				0537BF471BB1B9CB0057B5EA /* BinaryTree.m */,
 				0583430A1BA49E06001DE993 /* LinkedList.h */,
 				0583430B1BA49E06001DE993 /* LinkedList.m */,
 			);
@@ -387,12 +424,13 @@
 				059471471BAB086600552046 /* NSStringCategory.m in Sources */,
 				058343251BA71AC9001DE993 /* NotificationTableViewController.m in Sources */,
 				058342D01BA1D951001DE993 /* AppDelegate.m in Sources */,
+				0537BF481BB1B9CB0057B5EA /* BinaryTree.m in Sources */,
 				058343041BA1DA72001DE993 /* NSArrayCategory.m in Sources */,
 				058343181BA62857001DE993 /* ModelTableViewController.m in Sources */,
 				052F7A911BA9C31F0008C3D6 /* BinarySearch.m in Sources */,
 				058342CD1BA1D951001DE993 /* main.m in Sources */,
 				058343281BA728E9001DE993 /* KVOTableViewController.m in Sources */,
-				058343111BA4B4B0001DE993 /* BinarySearchTree.m in Sources */,
+				058343111BA4B4B0001DE993 /* BinarySearchTreeInC.m in Sources */,
 				052F7A8C1BA9145C0008C3D6 /* ProtocolExercises.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

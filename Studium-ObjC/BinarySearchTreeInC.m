@@ -6,7 +6,7 @@
 //  Copyright © 2015 Troy Stribling. All rights reserved.
 //
 
-#import "BinarySearchTree.h"
+#import "BinarySearchTreeInC.h"
 
 static struct Node* root;
 static  int _count = 0;

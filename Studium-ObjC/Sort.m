@@ -87,8 +87,8 @@
         } else {
             [self swap:i with:j];
         }
-        [self swap:lo with:j];
     }
+    [self swap:lo with:j];
     return j;
 }
 
