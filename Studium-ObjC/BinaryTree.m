@@ -34,6 +34,9 @@
 - (void)postorder:(BinaryTreeNode*)node apply:(void(^)(BinaryTreeNode* node))f;
 - (void)inorder:(BinaryTreeNode*)node apply:(void(^)(BinaryTreeNode* node))f;
 
+- (NSInteger)max:(BinaryTreeNode*)node;
+- (NSInteger)min:(BinaryTreeNode*)node;
+
 @end
 
 @implementation BinaryTreeNode
@@ -75,6 +78,46 @@
     [self inorder:node.left apply:f];
     f(node);
     [self inorder:node.right apply:f];
+}
+
+- (NSInteger)max {
+    return [self max:self];
+}
+
+- (NSInteger)max:(BinaryTreeNode*)node {
+    NSInteger maxValue = node.value;
+    if (node.left != nil) {
+        NSInteger maxLeft = [self max:node.left];
+        if (maxLeft > maxValue ) {
+            maxValue = maxLeft;
+        }
+    }
+    if (node.right != nil) {
+        NSInteger maxRight = [self max:node.right];
+        if (maxRight > maxValue) {
+            maxValue = maxRight;
+        }
+    }
+    return maxValue;
+}
+
+- (NSInteger)min {
+    return [self min:self];
+}
+
+- (NSInteger)min:(BinaryTreeNode*)node {
+    return 0;
+}
+
+- (BOOL)isBST {
+    return NO;
+}
+
+- (BOOL)isBST:(BinaryTreeNode*)node min:(NSInteger)min max:(NSInteger)max {
+    if (node == nil) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

@@ -11,6 +11,5 @@
 @interface NSString (StringMatch)
 
 - (NSInteger)match:(NSString*)__pattern;
-- (NSInteger)matchKMP:(NSString*)__pattern;
 
 @end

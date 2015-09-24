@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "BinarySearchTree.h"
+#import "BinarySearchTreeInC.h"
 #import "BinarySearch.h"
 
 @interface BinarySearchTests : XCTestCase

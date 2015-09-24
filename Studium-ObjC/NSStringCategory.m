@@ -29,8 +29,4 @@
     return n;
 }
 
-- (NSInteger)matchKMP:(NSString*)__pattern {
-    return 0;
-}
-
 @end

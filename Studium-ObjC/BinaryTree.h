@@ -30,4 +30,9 @@
 - (void)postorder:(void(^)(BinaryTreeNode* node))f;
 - (void)inorder:(void(^)(BinaryTreeNode* node))f;
 
+- (NSInteger)max;
+- (NSInteger)min;
+
+- (BOOL)isBST;
+
 @end
