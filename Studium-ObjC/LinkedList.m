@@ -8,6 +8,7 @@
 
 #import "LinkedList.h"
 
+// C Linked list implementaion
 typedef struct IntNode {
     struct IntNode* next;
     int value;
@@ -38,7 +39,15 @@ int intListCount() {
     return _intListCount;
 }
 
+// single linked list
 @implementation ListNode
+
+@end
+
+@interface ListNodes ()
+
+- (void)printReverse:(ListNode*)node;
+
 @end
 
 @implementation ListNodes
@@ -56,6 +65,118 @@ int intListCount() {
     self.head = oldNode.next;
     self.count--;
     return oldNode.value;
+}
+
+- (void)enqueue:(id)value {
+    ListNode* lastNode = self.head;
+    ListNode* newNode = [[ListNode alloc] init];
+    newNode.value = value;
+    if (lastNode == nil) {
+        self.head = newNode;
+    } else {
+        while (true) {
+            if (lastNode.next == nil) {
+                break;
+            } else {
+                lastNode = lastNode.next;
+            }
+        }
+        lastNode.next = newNode;
+    }
+    self.count++;
+}
+
+- (id)dequeue {
+    return [self pop];
+}
+
+- (void)insert:(id)value at:(NSInteger)loc {
+    ListNode* current = self.head;
+    ListNode* prev = nil;
+    NSInteger count = 0;
+    while (current.next) {
+        if (loc == count) {
+            break;
+        }
+        count++;
+        prev = current;
+        current = current.next;
+    }
+    if (current != nil) {
+        ListNode* newNode = [[ListNode alloc] init];
+        newNode.value = value;
+        newNode.next = current;
+        if (prev == nil) {
+            self.head = newNode;
+        } else {
+            prev.next = newNode;
+        }
+    }
+}
+
+- (void)deleteNodeAt:(NSInteger)loc {
+    ListNode* current = self.head;
+    ListNode* prev = nil;
+    NSInteger count = 0;
+    while (current) {
+        if (count == loc) {
+            break;
+        }
+        count++;
+        prev = current;
+        current = current.next;
+    }
+    if (current != nil) {
+        if (prev != nil) {
+            prev.next = current.next;
+        } else {
+            self.head = current.next;
+        }
+    }
+}
+
+- (void)deleteNodeWithValue:(id)value {
+    ListNode* current = self.head;
+    ListNode* prev = nil;
+    while (current) {
+        if ([current.value compare:value] == NSOrderedSame) {
+            break;
+        }
+        prev = current;
+        current = current.next;
+    }
+    if (current != nil) {
+        if (prev != nil) {
+            prev.next = current.next;
+        } else {
+            self.head = current.next;
+        }
+    }
+}
+
+- (void)printReverse {
+    [self printReverse:self.head];
+}
+
+- (void)printReverse:(ListNode *)node {
+    if (node == nil) {
+        return;
+    }
+    [self printReverse:node.next];
+    NSLog(@"value=%@", node.value);
+}
+
+- (void)reverse {
+    ListNode* prev = nil;
+    ListNode* next = nil;
+    ListNode* current = self.head;
+    while (current) {
+        next = current.next;
+        current.next = prev;
+        prev = current;
+        current = next;
+    }
+    self.head = prev;
 }
 
 @end

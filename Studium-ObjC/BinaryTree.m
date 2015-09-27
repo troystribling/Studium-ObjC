@@ -106,14 +106,26 @@
 }
 
 - (NSInteger)min:(BinaryTreeNode*)node {
-    return 0;
+    NSInteger minValue = node.value;
+    if (node.left != nil) {
+        NSInteger minLeft = [self min:node.left];
+        if (minLeft < minValue) {
+            minValue = minLeft;
+        }
+    }
+    if (node.right != nil) {
+        NSInteger minRight = [self min:node.right];
+        minValue = minRight;
+    }
+    return minValue;
 }
 
 - (BOOL)isBST {
-    return NO;
+    return YES;
 }
 
 - (BOOL)isBST:(BinaryTreeNode*)node min:(NSInteger)min max:(NSInteger)max {
+    static BinaryTreeNode* prev = nil;
     if (node == nil) {
         return YES;
     }

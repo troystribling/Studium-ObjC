@@ -11,6 +11,8 @@
 
 @interface LinkedListTests : XCTestCase
 
+@property ListNodes* nodes;
+
 @end
 
 void printIntList() {
@@ -26,6 +28,10 @@ void printIntList() {
 @implementation LinkedListTests
 
 - (void)setUp {
+    _nodes = [[ListNodes alloc] init];
+    [self.nodes push:@"Node 1"];
+    [self.nodes push:@"Node 2"];
+    [self.nodes push:@"Node 3"];
     [super setUp];
 }
 
@@ -41,11 +47,85 @@ void printIntList() {
 }
 
 -(void)testListNodes {
+    ListNode* current = self.nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+}
+
+- (void)testEnqueueNode {
     ListNodes* nodes = [[ListNodes alloc] init];
-    [nodes push:@"Node 1"];
-    [nodes push:@"Node 2"];
-    [nodes push:@"Node 3"];
+    [nodes enqueue:@"Node 1"];
+    [nodes enqueue:@"Node 2"];
+    [nodes enqueue:@"Node 3"];
     ListNode* current = nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+    
+}
+
+- (void)testPrintReverse {
+    ListNode* current = self.nodes.head;
+    while(current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+    [self.nodes printReverse];
+}
+
+- (void)testReverse {
+    ListNode* current = self.nodes.head;
+    while(current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+    [self.nodes reverse];
+    current = self.nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+}
+
+- (void)testInsertAt {
+    ListNode* current = self.nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+    [self.nodes insert:@"Node 10" at:1];
+    current = self.nodes.head;
+    while(current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+}
+
+- (void)testDeleteNodeAt {
+    ListNode* current = self.nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+    [self.nodes deleteNodeAt:2];
+    current = self.nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+}
+
+- (void)testDeleteNodeWithvalue {
+    ListNode* current = self.nodes.head;
+    while (current) {
+        NSLog(@"%@", current.value);
+        current = current.next;
+    }
+    [self.nodes deleteNodeWithValue:@"Node 2"];
+    current = self.nodes.head;
     while (current) {
         NSLog(@"%@", current.value);
         current = current.next;

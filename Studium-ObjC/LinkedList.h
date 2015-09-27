@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// single lined list
 @interface ListNode : NSObject
 
 @property(nonatomic, retain) ListNode* next;
@@ -23,8 +24,20 @@
 - (void)push:(id)value;
 - (id)pop;
 
+- (void)enqueue:(id)value;
+- (id)dequeue;
+
+- (void)insert:(id)value at:(NSInteger)loc;
+- (void)deleteNodeAt:(NSInteger)loc;
+- (void)deleteNodeWithValue:(id)value;
+
+- (void)printReverse;
+- (void)reverse;
+
 @end
 
+
+// C linked list implementation
 void push(int value);
 int pop();
 int intListCount();
