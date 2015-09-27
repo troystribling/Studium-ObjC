@@ -48,24 +48,6 @@
     return result;
 }
 
-+ (unsigned long)xorArray:(unsigned long[])numbers ofLength:(int)n {
-    NSLog(@"xor");
-    if (n == 1) {
-        NSLog(@"numbers[0]=%ld", numbers[0]);
-        return numbers[0];
-    }
-    unsigned long result = numbers[0];
-    NSLog(@"numbers[0]=%ld, result=%ld", numbers[0], result);
-    for (int i = 1; i < n; i++) {
-        result ^= numbers[i];
-        NSLog(@"numbers[%d]=%ld, result=%ld", i, numbers[i], result);
-    }
-    unsigned long result0 =  [self xorArray:&numbers[0] ofLength:n-1];
-    unsigned long result1 =  [self xorArray:&numbers[1] ofLength:n-1];
-    NSLog(@"n=%d, result=%ld, result0=%ld, result1=%ld", n, result, result0, result1);
-    return result ^ result0 ^ result1;
-}
-
 + (long)twosComplement:(long)val {
     return ~val+1;
 }

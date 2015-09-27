@@ -40,11 +40,6 @@
     NSLog(@"result = %ld, %@", result, [BitManipulation bitsToString:result]);
 }
 
-- (void)testXorArray {
-    unsigned long vals[] = {1, 2, 3};
-    unsigned long result = [BitManipulation xorArray:&vals ofLength:3];
-}
-
 - (void)testTwosComplement {
     long val = 99;
     long result = [BitManipulation twosComplement:val];

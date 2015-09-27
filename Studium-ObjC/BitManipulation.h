@@ -14,7 +14,6 @@
 + (long)flipBits:(long)val;
 + (BOOL)isPowerOf2:(unsigned long)val;
 + (unsigned long)andFrom:(unsigned long)start To:(unsigned long)end;
-+ (unsigned long)xorArray:(unsigned long[])array ofLength:(int)n;
 + (long)twosComplement:(long)val;
 
 @end

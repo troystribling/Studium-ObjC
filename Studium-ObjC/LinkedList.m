@@ -39,11 +39,26 @@ int intListCount() {
     return _intListCount;
 }
 
-// single linked list
+// single liked list node
 @implementation ListNode
+
+- (BOOL)hasCycle {
+    ListNode* current = self;
+    NSMutableSet* nodes = [NSMutableSet set];
+    while (current) {
+        if ([nodes containsObject:current]) {
+            return YES;
+        } else {
+            [nodes addObject:current];
+        }
+        current = current.next;
+    }
+    return NO;
+}
 
 @end
 
+// single linked list
 @interface ListNodes ()
 
 - (void)printReverse:(ListNode*)node;
@@ -177,6 +192,57 @@ int intListCount() {
         current = next;
     }
     self.head = prev;
+}
+
+@end
+
+// sorted linked list
+@implementation SortedListNodes
+
+- (void)insert:(id)val {
+    ListNode* newNode = [[ListNode alloc] init];
+    newNode.value = val;
+    if (self.head == nil) {
+        self.head = newNode;
+        return;
+    }
+    ListNode* current = self.head;
+    ListNode* prev = nil;
+    while (current) {
+        if ([current.value compare:val] == NSOrderedDescending) {
+            break;
+        }
+        prev = current;
+        current = current.next;
+    }
+    newNode.next = current;
+    if (prev != nil) {
+        prev.next = newNode;
+    } else {
+        self.head = newNode;
+    }
+}
+
+- (ListNodes*)merge:(SortedListNodes*)list {
+    ListNodes* mergedList = [[ListNodes alloc] init];
+    ListNode* left = self.head;
+    ListNode* right = list.head;
+    while (left || right) {
+        if (left == nil) {
+            [mergedList push:right.value];
+            right = right.next;
+        } else if (right == nil) {
+            [mergedList push:left.value];
+            left = left.next;
+        } else if ([left.value compare:right.value] == NSOrderedAscending) {
+            [mergedList push:left.value];
+            left = left.next;
+        } else {
+            [mergedList push:right.value];
+            right = right.next;
+        }
+    }
+    return mergedList;
 }
 
 @end

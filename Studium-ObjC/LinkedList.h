@@ -14,11 +14,13 @@
 @property(nonatomic, retain) ListNode* next;
 @property(nonatomic, retain) id value;
 
+- (BOOL)hasCycle;
+
 @end
 
 @interface ListNodes : NSObject
 
-@property(nonatomic, retain) ListNode* head;
+@property(nonatomic, strong) ListNode* head;
 @property(nonatomic, assign) NSInteger count;
 
 - (void)push:(id)value;
@@ -41,3 +43,17 @@
 void push(int value);
 int pop();
 int intListCount();
+
+// Sorted Single Linked List
+@interface SortedListNodes : NSObject
+
+@property(nonatomic, strong) ListNode* head;
+@property(nonatomic, assign) NSInteger count;
+
+- (void)insert:(id)val;
+- (ListNodes*)merge:(SortedListNodes*)list;
+
+@end
+
+
+// Double Linked List
