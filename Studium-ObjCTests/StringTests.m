@@ -29,4 +29,22 @@
     NSLog(@"%ld", index);
 }
 
+- (void)testPangram {
+    NSArray<NSString*>* sentence = @[@"The", @"quick", @"brown",
+                                     @"fox",  @"jumps",  @"over",
+                                     @"the", @"lazy", @"dog"];
+    NSLog(@"is pangram=%@", [Pangram isPangran:sentence] ? @"YES" : @"NO");
+    sentence = @[@"We", @"promptly", @"judged",
+                 @"antique", @"ivory", @"buckles", @"for", @"the", @"prize"];
+    NSLog(@"is pangram=%@", [Pangram isPangran:sentence] ? @"YES" : @"NO");
+    sentence = @[@"We", @"promptly", @"judged", @"antique", @"ivory",
+                 @"buckles", @"for", @"the", @"next", @"prize"];
+    NSLog(@"is pangram=%@", [Pangram isPangran:sentence] ? @"YES" : @"NO");
+}
+
+- (void)testHasSubString {
+    NSLog(@"has substring=%@", [@"hello" hasSubString:@"world"] ? @"YES" : @"NO");
+    NSLog(@"has substring=%@", [@"hi" hasSubString:@"world"] ? @"YES" : @"NO");    
+}
+
 @end

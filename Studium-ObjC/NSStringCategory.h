@@ -11,5 +11,13 @@
 @interface NSString (StringMatch)
 
 - (NSInteger)match:(NSString*)__pattern;
+- (BOOL)hasSubString:(NSString*)__otherString;
+- (NSString*)deleteRepetitions;
+
+@end
+
+@interface Pangram : NSObject
+
++ (BOOL)isPangran:(NSArray<NSString*>*)sentence;
 
 @end
