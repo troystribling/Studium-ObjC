@@ -36,6 +36,8 @@
 
 - (NSInteger)max:(BinaryTreeNode*)node;
 - (NSInteger)min:(BinaryTreeNode*)node;
+- (NSInteger)maxDepth:(BinaryTreeNode*)node;
+- (BOOL)isBST:(BinaryTreeNode*)node;
 
 @end
 
@@ -120,16 +122,36 @@
     return minValue;
 }
 
+- (NSInteger)maxDepth {
+    return [self maxDepth:self];
+}
+
+- (NSInteger)maxDepth:(BinaryTreeNode*)node {
+    if (node == nil) {
+        return 0;
+    }
+    NSInteger leftDepth = [self maxDepth:node.left];
+    NSInteger rightDepth = [self maxDepth:node.right];
+    return leftDepth > rightDepth ? leftDepth + 1 : rightDepth + 1;
+}
+
 - (BOOL)isBST {
     return YES;
 }
 
-- (BOOL)isBST:(BinaryTreeNode*)node min:(NSInteger)min max:(NSInteger)max {
+- (BOOL)isBST:(BinaryTreeNode*)node {
     static BinaryTreeNode* prev = nil;
     if (node == nil) {
         return YES;
     }
-    return NO;
+    if (![self isBST:node.left]) {
+        return NO;
+    }
+    if (prev != nil && prev.value > node.value) {
+        return false;
+    }
+    prev = node;
+    return [self isBST:node.right];
 }
 
 @end

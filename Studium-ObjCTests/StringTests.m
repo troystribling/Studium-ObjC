@@ -44,7 +44,13 @@
 
 - (void)testHasSubString {
     NSLog(@"has substring=%@", [@"hello" hasSubString:@"world"] ? @"YES" : @"NO");
-    NSLog(@"has substring=%@", [@"hi" hasSubString:@"world"] ? @"YES" : @"NO");    
+    NSLog(@"has substring=%@", [@"hi" hasSubString:@"world"] ? @"YES" : @"NO");
+}
+
+- (void)testDeleteRepetions {
+    NSLog(@"%@", [@"ABABAB" deleteRepetitions]);
+    NSLog(@"%@", [@"AAAAABB" deleteRepetitions]);
+    NSLog(@"%@", [@"AABBABB" deleteRepetitions]);
 }
 
 @end

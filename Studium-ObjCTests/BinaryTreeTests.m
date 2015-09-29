@@ -56,4 +56,8 @@
     }];
 }
 
+- (void)testMaxDepth {
+    NSLog(@"max depth=%ld", [self.bstRoot maxDepth]);
+}
+
 @end

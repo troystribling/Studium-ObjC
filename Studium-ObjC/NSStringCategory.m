@@ -44,6 +44,21 @@
 
 - (NSString*)deleteRepetitions {
     NSMutableString* result = [NSMutableString string];
+    NSInteger size = self.length;
+    if (size > 0) {
+        unichar prev = 0;
+        for (NSInteger i=0; i < size; i++) {
+            unichar chr = [self characterAtIndex:i];
+            if (i > 0) {
+                if (chr != prev) {
+                    [result appendString:[NSString stringWithCharacters:&chr length:1]];
+                }
+            } else {
+                [result appendString:[NSString stringWithCharacters:&chr length:1]];
+            }
+            prev = chr;
+        }
+    }
     return result;
 }
 

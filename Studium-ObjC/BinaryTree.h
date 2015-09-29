@@ -32,6 +32,7 @@
 
 - (NSInteger)max;
 - (NSInteger)min;
+- (NSInteger)maxDepth;
 
 - (BOOL)isBST;
 
