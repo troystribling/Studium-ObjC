@@ -29,11 +29,13 @@
 - (void)preorder:(void(^)(BinaryTreeNode* node))f;
 - (void)postorder:(void(^)(BinaryTreeNode* node))f;
 - (void)inorder:(void(^)(BinaryTreeNode* node))f;
+- (void)layerorder:(void(^)(BinaryTreeNode* node))f;
 
 - (NSInteger)max;
 - (NSInteger)min;
 - (NSInteger)maxDepth;
 
 - (BOOL)isBST;
+- (BOOL)isBST2;
 
 @end

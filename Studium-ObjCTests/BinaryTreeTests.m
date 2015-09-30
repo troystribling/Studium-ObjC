@@ -12,6 +12,7 @@
 @interface BinaryTreeTests : XCTestCase
 
 @property BinaryTreeNode* bstRoot;
+@property BinaryTreeNode* btRoot;
 
 @end
 
@@ -35,7 +36,25 @@
     n1.left = n2;
     n1.right = n3;
     _bstRoot.right = n4;
-    n4.right = n5;
+    n4.left = n5;
+
+    _btRoot = [[BinaryTreeNode alloc] init];
+    _btRoot.value = 10;
+    BinaryTreeNode* n21 = [[BinaryTreeNode alloc] init];
+    n21.value = 21;
+    BinaryTreeNode* n22 = [[BinaryTreeNode alloc] init];
+    n22.value = 1;
+    BinaryTreeNode* n23 = [[BinaryTreeNode alloc] init];
+    n23.value = 9;
+    BinaryTreeNode* n24 = [[BinaryTreeNode alloc] init];
+    n24.value = 20;
+    BinaryTreeNode* n25 = [[BinaryTreeNode alloc] init];
+    n25.value = 15;
+    _btRoot.left = n21;
+    n21.left = n22;
+    n21.right = n23;
+    _btRoot.right = n24;
+    n24.right = n25;
 }
 
 - (void)testPreorder {
@@ -56,8 +75,19 @@
     }];
 }
 
+- (void)testLayerorder {
+    [self.bstRoot layerorder:^(BinaryTreeNode* node) {
+        NSLog(@"%ld", node.value);
+    }];
+}
+
 - (void)testMaxDepth {
     NSLog(@"max depth=%ld", [self.bstRoot maxDepth]);
+}
+
+- (void)testIsBST {
+    NSLog(@"is BST=%@", [self.bstRoot isBST] ? @"YES" : @"NO");
+    NSLog(@"is BST=%@", [self.btRoot isBST] ? @"YES" : @"NO");
 }
 
 @end

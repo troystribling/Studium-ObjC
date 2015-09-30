@@ -77,12 +77,18 @@ int intListCount() {
 
 - (id)pop {
     ListNode* oldNode = self.head;
+    if (oldNode == nil) {
+        return nil;
+    }
     self.head = oldNode.next;
     self.count--;
     return oldNode.value;
 }
 
 - (void)enqueue:(id)value {
+    if (value == nil) {
+        return;
+    }
     ListNode* lastNode = self.head;
     ListNode* newNode = [[ListNode alloc] init];
     newNode.value = value;

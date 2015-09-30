@@ -7,6 +7,7 @@
 //
 
 #import "BinaryTree.h"
+#import "LinkedList.h"
 
 // Queue
 @implementation Queue
@@ -33,6 +34,7 @@
 - (void)preorder:(BinaryTreeNode*)node apply:(void(^)(BinaryTreeNode* node))f;
 - (void)postorder:(BinaryTreeNode*)node apply:(void(^)(BinaryTreeNode* node))f;
 - (void)inorder:(BinaryTreeNode*)node apply:(void(^)(BinaryTreeNode* node))f;
+- (void)layerorder:(ListNodes*)nodes apply:(void(^)(BinaryTreeNode* node))f;
 
 - (NSInteger)max:(BinaryTreeNode*)node;
 - (NSInteger)min:(BinaryTreeNode*)node;
@@ -86,6 +88,23 @@
     return [self max:self];
 }
 
+- (void)layerorder:(void (^)(BinaryTreeNode *))f {
+    ListNodes* nodes = [[ListNodes alloc] init];
+    [nodes enqueue:self];
+    [self layerorder:nodes apply:f];
+}
+
+- (void)layerorder:(ListNodes *)nodes apply:(void (^)(BinaryTreeNode *))f {
+    BinaryTreeNode* node = [nodes dequeue];
+    if (node == nil) {
+        return;
+    }
+    f(node);
+    [nodes enqueue:node.left];
+    [nodes enqueue:node.right];
+    [self layerorder:nodes apply:f];
+}
+
 - (NSInteger)max:(BinaryTreeNode*)node {
     NSInteger maxValue = node.value;
     if (node.left != nil) {
@@ -136,7 +155,7 @@
 }
 
 - (BOOL)isBST {
-    return YES;
+    return [self isBST:self];
 }
 
 - (BOOL)isBST:(BinaryTreeNode*)node {
@@ -148,10 +167,14 @@
         return NO;
     }
     if (prev != nil && prev.value > node.value) {
-        return false;
+        return NO;
     }
     prev = node;
     return [self isBST:node.right];
+}
+
+- (BOOL)isBST2 {
+    return YES;
 }
 
 @end
