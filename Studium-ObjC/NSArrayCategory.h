@@ -14,6 +14,8 @@
 - (void)reverse;
 - (void)reverseStartingAt:(NSInteger)i upTo:(NSInteger)j;
 - (void)rotateAmount:(NSInteger)i;
+- (NSMutableArray*)rotateNaiveAmount:(NSInteger)i;
+- (NSMutableArray*)reverseNaiveFrom:(NSInteger)i to:(NSInteger)j;
 
 @end
 

@@ -35,6 +35,21 @@
     [self reverseStartingAt:i upTo:[self count] - 1];
 }
 
+- (NSMutableArray*)rotateNaiveAmount:(NSInteger)i {
+    NSMutableArray* rev1 = [self reverseNaiveFrom:0 to:[self count] - 1];
+    NSMutableArray* rev2 = [rev1 reverseNaiveFrom:0 to:i-1];
+    return [rev2 reverseNaiveFrom:i to:[self count] - 1];
+}
+
+- (NSMutableArray*)reverseNaiveFrom:(NSInteger)i to:(NSInteger)j {
+    NSInteger n = j - i;
+    NSMutableArray* result = [NSMutableArray arrayWithArray:self];
+    for (NSInteger k = 0; k <= n; k++) {
+        [result replaceObjectAtIndex:i+k withObject:[self objectAtIndex:j-k]];
+    }
+    return result;
+}
+
 @end
 
 // C
